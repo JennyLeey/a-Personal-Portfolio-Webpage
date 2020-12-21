@@ -1,0 +1,909 @@
+<!DOCTYPE HTML>
+<HTML>
+<head> <h1><u> Whatsapp Technical Documentation</u> </h1> 
+<style>
+body {
+  min-width: 300px;
+  color: #4d4e43;
+  background-color: 
+  font-family:Harrington, 'Poppins', 'Open Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1{font-size:50px;
+  text-align:center;
+   margin-left:230px;
+   color:black;}
+   
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+  font-family:'Harlow Solid Italic';
+  border: 15px;
+  border-color:hsl(35, 60%, 60%);
+  background-color: hsl(45, 70%, 90%);
+ 
+}
+
+img{     border-color: lightgray;
+         border-width: 2px;
+         border-style: solid;
+         margin-bottom:15px;
+      	 margin-top: 40px;
+		 margin-left:40px;
+		 align: center;
+		 justify-content:center;
+           }
+
+#call {  background-color: lightblue;
+         padding: 10px;
+         border-top: 2px blue dotted;
+         border-bottom: 2px blue dotted;
+		 }
+
+#nav-bar {
+  position: fixed;
+  min-width: 200px;
+  top: 0px;
+  left: 0px;
+  width: 255px;
+  height: 90%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+ #nav-bar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#nav-bar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#nav-bar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+
+
+#main-doct {
+  position: absolute;
+  margin-left: 267px;
+  padding: 2px;
+  margin-bottom: 110px;
+  margin-top:300px;
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doct {
+    margin-left: -10px;
+  }
+
+  #main-doct {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 
+  }
+  
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+}		 
+
+		   
+ #main-section{margin-top: 150px;}
+ 
+
+  
+  
+		 
+footer {
+        background-color: hsl(45, 50%, 90%);
+        margin-top: 14860px;
+		margin-left:300px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-bottom;
+        padding: 10px;
+        padding-bottom: 0px;
+		font-family: chiller;
+		color: black;
+}
+
+#foot-nav {
+     display: flex;
+     grid-gap: 10px;
+}
+
+footer p {
+     font-size: 85%;
+     color: gray;
+     margin-bottom: 10px;
+	 text-align: center;
+}
+
+#mores {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       height: 200px;
+       margin-top: 50px;
+      }
+
+#mores > h2 {
+        margin-bottom: 20px;
+        word-wrap: break-word;
+		font-family: 'Harlow Solid Italic'; 
+}
+
+#mores input[type='email'] {
+         max-width: 300px;
+         width: 100%;
+         padding: 5px;
+		 margin-bottom: 10px
+         }
+		 
+#mores input[type='message'] {
+         max-width: 300px;
+         width: 100%;
+         padding: 5px;
+		 height: 75px;
+		 text-align:auto;
+         }
+
+#mores input[type='submit'] {
+         max-width: 150px;
+         width: 100%;
+         height: 30px;
+         margin: 15px 0;
+         border: 0;
+         background-color: black;
+		 color: white;
+         }
+
+#mores input[type='submit']:hover {
+           background-color: grey;
+           transition: background-color 1s;
+          }
+
+@media (max-width: 650px) {
+     #more {
+            margin-top: 120px;
+        }
+}
+
+
+</style>
+<title>Whatsapp Technical Documentation</title> 
+</head>
+
+
+<body>
+
+<nav id="nav-bar">
+  <header>Whatsapp Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+	
+    <li>
+      <a class="nav-link" href="#Delivering_money_advice"
+        >Delivering money advice
+      </a>
+     <ol>
+      <li>Tips & Guidance</li>
+      <li> Using the WhatsApp Desktop Application</li>
+     </ol>
+    </li>
+	
+    <li>
+      <a class="nav-link" href="#Setting_up_WhatsApp_on_your_phone">
+	  Setting up WhatsApp on your phone
+     </a>
+    </li>
+	
+    <li><a class="nav-link" href="#Setting_up_WhatsApp_on_your_computer">Setting up WhatsApp on your computer
+    </a>
+    </li>
+	
+    <li><a class="nav-link" href="#Sending_and_receiving_documents">Sending and receiving documents
+   </a>
+   </li>
+   
+    <li>
+      <a class="nav-link" href="#Video">Video - setting up on your computer
+      </a>
+    </li>
+	
+    <li><a class="nav-link" href="#WhatsApp_Business_Application">WhatsApp Business Application
+    </a>
+	</li>
+	
+	 <li><a class="nav-link" href="#Acknowledgements">Acknowledgements</a>
+	</li>
+
+     <li><a class="nav-link" href="#Reference">Reference
+    </a>
+	</li>
+	
+	 <li><a class="nav-link" href="#Feedback">Feedbacks</a>
+	 </li>
+	 
+ </ul>
+</nav>
+<br>
+
+
+
+
+
+
+
+
+</br>
+<p>
+<img src="image/whatsapp.bmp" style="width:50%; height:20%; align-items:center; margin-left:500px;">
+</p>
+
+<main id="main-doct">
+  <section class="main-section" id="Introduction">
+    <header><u>Introduction</u></header>
+    <article>
+      <p>
+       The purpose of this manual is to assist you in setting up and using WhatsApp
+       Messenger for the delivery of advice. It is important that you keep in mind a few
+       things while reading this document.
+
+      </p>
+
+      <p>
+        Firstly, it should be read alongside the other materials within the pack, especially
+        the Learning Report. Within this report there are recommendations about the
+        type of service we believe WhatsApp is appropriate for use with at the time of
+        publication. We would strongly urge you to read and consider these
+        recommendations before using the platform within your organisation.
+      <br>
+	  Secondly please keep in mind that we tested WhatsApp messenger with the
+      delivery of debt advice within our organisation, Citizens Advice Manchester. The
+      accompanying learning report as well as the Evaluation Report goes into detail
+      about the type of service within which the platform was tested. It would be
+      useful to keep this in mind when drawing your own conclusion about the
+      platform’s appropriateness for use within your organisation.
+	  </br>
+	  <br>
+	  Finally, keep in mind at all times that the information within this pack may
+      become outdated given the speed of technological change and advancement.
+      WhatsApp is continuously being updated and improved by the developers and
+      as such, some of the screen shots and the way in which specific parts of the
+      application are accessed may change over time.
+	 </br>
+	 </p>
+	 <p>
+	   This first section of this guide focuses on the delivery of money advice using
+       WhatsApp. This contains practical tips and guidance as well as a brief look at the
+       WhatsApp desktop application, which we used to to organise and respond to
+       messages using a computer. The second section is more focussed on the
+       technical side of things, showing you how you can set up WhatsApp on your
+       phone and on your computer.
+
+	  <br>
+	   The final section looks at the newly released WhatsApp Business Application
+       which offers some additional features which will be useful for an organisation
+       using WhatsApp to communicate with their clients.
+	   </br>
+	  </p>
+	  
+    </article>
+  </section>
+  
+ <section class="main-section" id="Delivering_money_advice">
+    <header><u>Delivering money advice -Tips & Guidance</u></header>
+    <article>
+      <p>Delivering money advice using WhatsApp is unlike other channels. It can be
+thought of as a hybrid of email and webchat. The convenience and flexibility that
+the platform offers clients mean some will message in with the expectation of a
+back and forth instant messaging scenario, much like webchat. Others may wait
+hours or even days in between responses with the chat more closely resembling
+email.
+<br>
+Here’s a picture to show how the service worked in terms of new clients
+accessing debt advice using WhatsApp.
+<img src="image/page.jpg" style="align:center;">
+</br>
+</p>
+
+<p>
+ <b> Setting client’s expectations</b> - it should be made clear on your website or
+wherever there is information about the service how long clients can expect to
+wait before a response to their message. We used two working days and found
+this offered a nice balance.
+</p>
+
+<p>
+<b>Encourage client to provide initial overview of problem</b> - to avoid something
+along the lines of “hi, hello” and nothing more in an initial message. This was
+something we encountered quite frequently and it meant that it took longer to
+give the client the advice.
+</p>
+
+<p>
+<b>Managing chats</b> - It is important to use your own personal judgment when
+managing chats. Some clients will be more open and provide a lot of information
+up front, all at once. Others may be more closed and provide information in
+smaller chunks, resulting in some longer back and forth conversations. Try and
+apply a consistent rule such as if a client has not responded within a set time
+(such as a few days) the chat can be ‘closed’.
+</p>
+
+<p>
+By closed, we mean that:
+      <ul>
+        <li>
+        the content of the chat is copied into your case management system
+        </li>
+   		<li>
+		any shared documents are downloaded and attached to the client’s case
+        file
+        </li>
+		<li>
+		 the conversation is deleted from the phone
+		</li>
+		<li>
+		the client is sent a message to confirm that their enquiry has been closed
+		</li>
+      </ul>
+	  </p>
+    </article>
+	</section>
+	
+	 <section class="main-section" id="Delivering_money_advice">
+	<header><u>Using the WhatsApp Desktop Application</u></header>
+    <article>
+	<p>While this may change in the future, at the time of writing and based on a review
+on software available at the time, the WhatsApp desktop application was the
+most suitable software for accessing and using WhatsApp on a computer. Later
+in the guide we will explain how to set up WhatsApp on your phone and your
+computer and how to connect the two.
+<br>Although the platform has some great features there are some limitations worth
+knowing about.</br>
+</p>
+
+<p>
+<b>The Phone</b> - you will only be able to access WhatsApp on your computer if you
+have a working mobile phone with you. If someone on another computer wishes
+to access WhatsApp then they can do so, but they will need the phone to log in.
+<br>Once a phone is logged in on one computer it will automatically be logged out of
+the other computer being previously used. This means that you cannot have
+multiple people using WhatsApp at one time.</br>
+</p>
+
+<p><b>Contacts </b>- It’s best to add the client as a contact on the mobile phone when the
+first message has been received. This has to be done on the phone itself. We
+would recommend saving the client under a reference number; we used the
+number generated when creating a profile on our case management system.
+<br>This means the client remains anonymous on the phone and allows you to easily
+search and find them on WhatsApp.</br>
+</p>
+
+<p id="call">
+<b> Tip - Adding Contacts: When adding a client you need to ensure their number is saved using the country code.
+For the UK this is +44. See below:
+- [country code] + [Full Phone Number]
+- So 07123456789 should be saved as +447123456789
+We found that saving contacts on your phone without the area code occasionally meant
+they could not be found on WhatsApp.</b>
+</p>
+<p>You can read more about adding contacts on Android devices here ​<a href="https://faq.whatsapp.com/en/android/21082107 " target="_blank">Adding
+ contacts on Android FAQ</a></p>
+<p>
+<b>Chats</b>​ - Once you have finished with that particular client the WhatsApp
+conversation should be deleted. As well as protecting client information this
+means that your phone’s message list does not get clogged with dozens of
+different client conversations.
+<br>
+<b>Autoresponse​</b> - There are a number of third party apps that offer an
+auto-response function for use within WhatsApp. However after extensive
+testing none of them worked consistently or were fit for purpose. This is a
+feature that is available in the WhatsApp Business App (see relevant section
+below) but we did not have a chance to properly test it.
+</br>
+<br>
+<b>Template Responses</b> ​-​
+ ​It may be useful to develop a template response that you
+can quickly send to all clients when they first contact you.
+
+The contents of this will depend on the sort of service you are operating. We
+found this useful for our ‘access channel’ clients, for whom we had no
+information about.
+</br>
+</p>
+Here is an example of the message we used:
+<p id="call">
+<b>“Hi, thank you for your message. My name is XXXX. Your reference number
+for this chat is XXXX You should keep a note of this so we can identify you if
+you contact us again. Can you please give us an overview of the problem?”
+</b>
+</p>
+<p>
+<br>
+We also used an additional template to request basic information from the client
+(date of birth, gender, postcode), so you may wish to add something to help you
+gather whatever data you need at the beginning of the conversation.
+</br>
+<br>
+<b>Templates for non-debt advice </b>- ​because we had clients continually contact us
+about other issues, such as Employment, Welfare Benefits, Housing etc we
+developed standardised templates to signpost them to our general adviceline or
+other specialist organisations, such as Shelter, as we were only funded to deliver
+debt advice via WhatsApp.
+</br>
+<br>
+<b>Click to chat </b>- ​A useful feature to implement is to create a ‘click to chat’ link on
+your website. This allows clients using their mobile phone to click on your
+telephone number on your website and access WhatsApp straight away, without
+the need to save the number in their contacts first. When they tap the phone
+number WhatsApp will automatically open and they can begin to type their
+message to you.
+</br>
+<br>
+You can also create a ​pre-filled message that will automatically appear in the text
+field of a chat when they being their WhatsApp message. We used this to
+provide a link to the terms and conditions of the service and also to request
+basic information from the client.
+</br>
+There is a detailed guide on how to do this on the WhatsApp website:
+<a href="https://faq.whatsapp.com/en/android/26000030/" target="_blank">https://faq.whatsapp.com/en/android/26000030/</a>
+
+</p>
+<p id="call">
+<b> Tip - Changing Your Call Settings
+<br>
+We would recommend adjusting your phone setting so that any phone calls go straight
+to voicemail, to avoid the issue of having clients call the phone rather than sending a
+WhatsApp message.</br>
+Unfortunately there’s no way to stop clients making a WhatsApp Voice Call, so we would
+encourage you to make it clear on your website and promotional materials that clients
+must send a message rather than call, assuming this is how you want to operate your
+service.
+</b>
+</p>
+
+	</article>
+</section>
+  
+   <section class="main-section" id="Setting_up_WhatsApp_on_your_phone">
+    <header><u>Setting up WhatsApp on your Phone</u>
+</header>
+    <article>
+      <p>
+        Below is a witten step-by-step guide for setting up WhatsApp Messenger on an
+Android device with accompanying screenshots. If you are using an Apple
+iPhone, the process is very similar; you will need to go to the App Store on your
+device and download WhatsApp from there.
+      </p>
+	  <p style="align: center;">
+	  <ol>
+	  <li>Open Google Play Store on your phone. The icon for this app should look
+       like this:
+       <br><img src="image/google icon.bmp" style="width:100px; height: 65px;"></br>
+      </li>
+     <li>
+	 Search for WhatsApp on the store and tap on WhatsApp Messenger as it
+comes up in the search results.
+     <br><img src="image/search.bmp" ></br>
+     </li>
+	 <li>
+	 Tap install to download the app for your phone
+     <br><img src="image/install.bmp" ></br>
+	 </li>
+	 <li>
+	 Tap accept to allow WhatsApp access to your contacts, location, and
+others.
+      <br><img src="image/information.bmp" ></br>
+	  </li>
+	  <li>
+	  Tap open once WhatsApp has downloaded on your phone.
+	   <br> <img src="image/open page.bmp"></br>
+     </li>
+	 <li>
+	 On the Welcome to WhatsApp screen, tap on agree and continue once
+you have read the terms of service
+ <br> <img src="image/welcome page.bmp"></br>
+	 </li>
+    <li>
+	Select your country (United Kingdom),
+     <ul>
+	 <li>enter the phone number of the device you are using,</li>
+	 <li>click next</li>
+	 </ul>
+	 Once you have done this you should receive a six digit verification code, sent to
+you by text message
+    </li>
+	<li>
+	On the next screen enter the code
+    <br> <img src="image/verify.bmp" alt="code entery"></br>
+    </li>
+<p id="call">
+<b>Tip - No Code?
+<br>If you have any problems receiving the message you have the option to ask for it to be
+re-sent or to receive it by phone call.</br>
+</b>
+</p>
+<li>
+Finally, enter your name and a profile picture of your choosing.
+ <br> <img src="image/profile.bmp" alt="profile info"></br>
+</li>
+
+</ol>
+</p>
+      <p>
+        It’s up to you what you want to use as your profile picture. We used our logo but
+you could also consider using a picture of an adviser with something that
+identifies them as working for your organisation, e.g a t-shirt or lanyard with
+your branding on.
+     <br>
+	 If you get stuck at any point then head over to <a href="https://faq.whatsapp.com/​" target="_blank">​https://faq.whatsapp.com/​</a> for
+further information and support.
+     </br>
+      </p>
+      
+    </article>
+  </section>
+  
+ 
+ <section class="main-section" id="Setting_up_WhatsApp_on_your_computer">
+    <header><u>Setting up WhatsApp on your Computer</u></header>
+    <article>
+      <p>
+	  Once you have your phone set up properly you can download WhatsApp for
+your computer and connect it to your phone. This is very important because this
+will allow you to read and respond to messages on your computer, using your
+keyboard. This is far more efficient and practical then using the phone itself to
+send message to clients as many will likely be quite long and detailed.
+<br>
+It also means you can send and receive documents and images using your
+computer. If a client sends you something then you can download it and put it
+straight onto your case management system, rather than having to move it from
+your phone to the computer first.
+</br>
+</p>
+<p>
+<b>Download WhatsApp</b>
+<br>
+Go to: <a href=" ​https://www.whatsapp.com/download/" target="_blank"> ​https://www.whatsapp.com/download/</a>
+You should see the image below on the webpage.
+</br>
+<br>
+<img src="image/download page.bmp" alt="download page">
+</br>
+Click to download the appropriate version. If you are not using Windows you can
+click the ‘not on windows’ link just below to download for Mac.
+
+</p>
+<p>
+Once you have downloaded and installed WhatsApp on your computer, you
+should be met with the screen below:
+<br>
+<img src="image/set.bmp">
+</br>
+</p>
+<p id="call">
+<b>Tip - Pin to Taskbar
+<br>
+While the application is open, you can right click the WhatsApp logo at the bottom of
+your screen and select ‘pin to taskbar’
+. This means the WhatsApp logo will stay there at
+all times and you can simply click it in order to open the program. A small red
+notification will appear when you have a new message.
+</br>
+</b>
+</p>
+<img src="image/taskbar.bmp" alt="image of taskbar">
+    </article>
+
+    <header><u>Connecting Your Phone & Computer</u></header>
+	<article>
+    <p>
+     <ol>
+	 <li>Open WhatsApp on your phone</li>
+     <li> Click on the three white dots in the top right hand corner. <br> <img src="image/page.bmp"></br></li>
+	 <li>Click​ ‘WhatsApp Web’.<br> <img src="image/settings.bmp"></br></li>
+
+	 </ol>
+     </p>
+    
+    <p>
+     The following screen should appear below..​ <b>Click ‘Ok, Got It’​</b> You now need to
+lift the phone up to scan the code on the WhatsApp web application (see earlier
+screenshot). You simply need to hold the phone up to your computer screen
+(you may have to keep it there for a few seconds) and it will automatically sync
+the phone with the computer, meaning WhatsApp will now appear on your
+computer.
+<br><img src="image/scan.bmp"></br>
+    </p>
+	<p>
+	This is what the computer will look like once the phone is connected. Messages
+will appear on the left hand side.
+<br>
+<img src="image/connect.bmp"> </br>
+</p>
+<p id="call">
+<b>Tip - Access Through Your Web Browser
+<br>
+There is also a way to access WhatsApp on your computer without downloading it. You
+can go to <a href="https://web.whatsapp.com/" target="_blank">https://web.whatsapp.com/</a> directly and access it this way. However we have
+recommend that you download WhatsApp to your computer because in our experience
+it ran more smoothly and was quicker. However online access could be useful in certain
+situations, such as if you are using a colleague’s computer temporarily.
+</br>
+</b>
+</p>
+	</article>
+  </section>
+  
+  <section class="main-section" id="Sending_and_receiving_documents">
+    <header><u>Sending and Receiving Documents/Images</u>
+</header>
+    <article>
+      <h2><b>Receiving Documents</b></h2>
+
+      <p>
+        WhatsApp makes it very easy to send and receives images, documents and other
+files. This is very useful when advising clients as they can easily take and send a
+photograph of any paperwork relevant to their enquiry. This ensures that you
+are able to give accurate advice. It also means that you can easily send
+documents, such as a financial statement, from your computer to the client.
+<br>
+You can read the full evaluation report for more feedback from clients and
+advisers about using WhatsApp to send and receive documents.
+</br>
+<br>
+If a client sends an image, it should appear on the message as below.
+Click on the arrow on the top right hand corner of the image and click
+‘download’. This file will save on your computer, typically as a jpeg file.
+</br>
+<br>
+<img src="image/chat.bmp">
+</br>
+      </p>
+	 <h2><b> Sending Documents</b></h2>
+
+      <p>
+        Click on the paperclip on the top right hand corner. From there you can select
+the appropriate icon from photo, camera, document, contact. The most common
+will be document if you are sending PDFs or word documents from your
+computer, however there may be photographs taken on the phone that you also
+wish to send.
+<br>
+<img scr="image/option.bmp">
+</br>
+      </p>
+      <p id="call">
+        <b>Tip - File Sizes
+		<br>
+WhatsApp supports sending documents in all kinds of file formats but be aware that
+there is a file size limit of 100mb.</br>
+</b>
+      </p>
+	  <p>
+	WhatsApp have an excellent guide to sending different documents on their
+website here, which breaks down the different icons seen above in more detail:
+<ul>
+<li><a href="https://faq.whatsapp.com/en/iphone/20964587" target="_blank">iPhone</a></li>
+<li> <a href="https://faq.whatsapp.com/en/android/23112542/?category=5245251" target="_blank">Android</a></li>
+</ul>
+</p>
+
+    </article>
+  </section>
+  
+  <section class="main-section" id="Video">
+    <header><u>How to Video</u></header>
+    <article>
+      <p>
+        We have produced a video showing you how to set up WhatsApp on your phone
+as well as some other useful hints and tips.
+<br>
+This can be found on Citizens Advice Manchester’s YouTube channel.
+Link:<a href="​https://tinyurl.com/yd5k3sjb" target="_blank"> ​https://tinyurl.com/yd5k3sjb</a></br>
+<br>
+If you search ​‘Citizens Advice Manchester YouTube’​ on Google it is one of the
+top results.
+</br>
+
+      </p>
+
+    </article>
+  </section>
+  
+ <section class="main-section" id="WhatsApp_Business_Application">
+    <header><u>WhatsApp Business Application</u>
+</header>
+    <article>
+      <p>
+       <img src="image/advice.bmp">  <img src="image/app.bmp" style="margin-left:70px;">
+      </p>
+
+      <p>
+       Shortly after completion of the pilot, WhatsApp released their much anticipated
+Business Application. This is a separate app aimed at small-medium size
+business/organisations who want to use WhatsApp to communicate with their
+customers.
+<br>
+As of the date of publication this app is free to use and is available to download
+for Android devices. It is not yet available for iPhone.
+</br>
+</p>
+<p>
+The app is very similar to the standard WhatsApp and you will need to download
+it from the play store and verify your phone number in the same way outlined
+earlier on in this guide. You can also use it with WhatsApp web (no separate
+download is required - it is just one WhatsApp web for both the normal and
+business versions) which looks and operates in much the same way.
+</p>
+<p>
+There are still plenty of very useful features unique to the business app which
+will help in ensuring a smoother and more efficient service for clients. Please
+note we did not have an opportunity to test these features during service
+delivery.
+
+      </p>
+	  
+    </article>
+  </section>
+  
+  <section id="main-section" id="WhatsApp_Business_Application">
+    <header><u>Business App Features</u>
+</header>
+    <article>
+	<h2><b>Profile</b></h2>
+
+      <p>
+       You can set up a profile for your organisation to give clients more information
+about who they are getting in touch with.
+<br>
+</br>
+Tap on the three white dots in the top right hand corner. Go to settings >
+business settings > profile.
+<br>
+
+From here you can add a photo, business address, category, description,
+opening hours, contact details and web address.
+</br>
+      </p>
+
+     <h2><b>Messaging Tools</b></h2>
+      <p>
+       Probably the biggest addition in terms of features offered by the Business App
+are the messaging tools. They are likely to be very useful for you when speaking
+with clients.
+
+      </p>
+
+      <p>
+	  <img src="image/message.bmp">
+     <br>  <b> Away Message</b> - this allows you to create an automated message for when you are away. For example, this
+could be used over the Christmas period if your organisation closes. It can be customised so that it is sent
+between a specific time and date range. E.g between 23rd - 31st December. If a client contacts you
+during this period they will receive a message explaining the service is closed over the Christmas period.
+     </br>
+      </p>
+      <img src="image/greeting.bmp">
+      <p>
+        <b>Greeting Message</b> ​-​
+ ​this allows you to create and send an automated response to clients when messaging you for the first time or after a 14 day
+period of inactivity. This feature will be useful to briefly explain basics of service, e.g expected time for a
+response, ask for certain information and/or to direct users to terms and conditions of service.
+
+      </p>
+      <img src="image/edit.bmp">
+      <p>
+	  <b>Quick Replies</b> ​-​
+ you can create template responses to suit your needs, for example a thank you message for once the enquiry is
+finished. You can then create a shortcut, for example /thanks. So instead of having to type this full
+message out each time, you can just type ‘/thanks’ and it will add the full text into the message to save on time.
+
+	  </p>
+	  <h2> <b> Statistics</b></h2>
+      <p>
+	
+Another useful feature relates to your data. WhatsApp Business has a dedicated
+statistics section which will be useful for helping you to understand how
+WhatsApp is working for your organisation. Within this you can keep tabs on the
+number of messages that have been sent, delivered and read.
+
+	  </p>
+	  <p>
+	  <b>For further information about the use of WhatsApp for advice delivery,
+contact Joel Crawley:
+<a href="malto:joel.crawley@citizensadvicemanchester.org.uk" target="_blank">joel.crawley@citizensadvicemanchester.org.uk</a>
+</b>
+</p>
+     
+ </article>
+  </section>
+  
+   <section class="main-section" id="Acknowledgements">
+    <header><u>Acknowledgements</u>
+</header>
+    <article>
+      <p>Thank you to the Money Advice Trust for funding this pilot as part of their
+Innovation Grants Programme.</p>
+     
+      <p>
+	  Thank you to Manchester Metropolitan University for assisting us in the
+evaluation of the project and for producing their report.
+</p>
+<p>
+For infographic image showing how the service works:
+<ul>
+<li>Icon 1 made by ​<a href="https//www.flaticon.com/authors/good-ware" target="_blank">Good Ware​</a> from <a href="https//www.flaticon.com/" target="_blank">www.flaticon.com</a></li>
+
+<li>Icons 2 and 5 made by ​<a href="https//www.flaticon.com/authors/vectors-market" target="_blank"> ​Vectors Market​</a> from <a href="https//www.flaticon.com/" target="_blank"> ​www.flaticon.com</a></li>
+
+<li>Icon 3 made by ​​<a href="https//www.flaticon.com/authors/​those-icons" target="_blank"> ​Those Icons</a>​ from <a href="https//www.flaticon.com/" target="_blank">​www.flaticon.com</a></li>
+
+<li>Icons 4, 6 and 8 made by ​​<a href="https//www.freepik.com/" target="_blank">​Freepik​</a> from ​<a href="https//www.flaticon.com/" target="_blank">​www.flaticon.com</a></li>
+
+<li>Icon 7 made by <a href="https//www.flaticon.com/authors/​mynamepong" target="_blank"> ​Mynamepong</a> ​from ​​<a href="https//www.flaticon.com/" target="_blank">www.flaticon.com</a></li>
+</ul>
+</p>
+   </article>
+</section>
+  
+    <section class="main-section" id="Reference">
+
+    <header><u>Reference</u></header>
+    <article>
+      <ul>
+        <li>
+          All the documentation in this page is taken from
+          <a
+            href="www.wiseradviser.org"
+            target="_blank"
+            >WA</a>
+        </li>
+      </ul>
+    </article>
+  </section>
+  
+    <section class="main-section" id="Feedback">
+	<header><u>Feedback</u></header>
+     <article id="mores">
+<h3> For questions, you can message us and we'll be sure to give you a feedback </h3>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input type="email" name="email" placeholder="enter your email" id="email" required></input>
+		 <input type="message" name="message" placeholder="Input Message" id="message" required></input>
+        <input type="submit" id="submit" value="Send" class="btn">
+      </form>
+    </article>
+    </div>
+
+</main>
+
+<footer>
+  <nav id="foot-nav">
+      <a href="#" class="nav-link">Privacy</a>
+      <a href="#" class="nav-link">Terms</a>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+<p>All Rights Reserved, Copyright 2020.</p>
+</footer>
+</body>
+</html>

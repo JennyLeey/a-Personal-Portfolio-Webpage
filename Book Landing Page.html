@@ -1,0 +1,534 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Wattpad Book landing page</title>
+
+    <script>
+ function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } 
+  else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+    </script>
+     <style>
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,500" rel="stylesheet" type="text/css">;
+
+body {
+ 
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", Helvetica, 'Poppins', sans-serif;}
+  /* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: hsl(210, 45%, 60%);
+  background-image:
+    url(image/Sky.jpg);
+  background-size: cover;
+  backuground-repeat: repeat;
+  background-position: center;
+}
+
+header {
+      position: fixed;
+      width: 100%;
+      background-color: hsl(45, 50%, 90%);
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      padding-top: 5px;
+}
+
+main {
+     display: flex;
+     flex-direction: column;
+     margin: auto;
+     max-width: 750px;
+     position: relative;
+     top: 40px;
+     z-index: 0;
+}
+
+#header-img {
+      grid-column: 1;
+      width: 40%;
+      align-self: center;
+}
+
+#nav-bar {
+      grid-column: 2;
+      align-self: center;
+      justify-self: right;
+      display: flex;
+      margin-right: 5px;
+   }
+
+.nav-link {
+     text-decoration: inherit;
+     color: inherit;
+     margin: 12px;
+}
+
+#intro {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+#intro h2 {
+         margin-bottom: 15px;
+}
+
+#form {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 10px;
+}
+
+#author {
+       margin-top: 20px;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       font-size:25;
+}
+
+.feature-section {
+       display: grid;
+       grid-template-columns: 100px 1fr;
+       align-items: center;
+}
+
+.feature-img {
+      width: 120%;
+      justify-self: center;
+      align-self: start;
+      margin-top: 25px;
+}
+
+#video {
+      margin: auto;
+      max-width: 100%;
+      margin-top: 20px;
+      margin-bottom: 10px;
+}
+
+#pricing {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      margin-top: 20px;
+}
+
+.product-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-style: groove;
+      border-color: lightgray;
+      border-width: 1px;
+      padding-bottom: 10px;
+      background-color: yellow;
+}
+
+.product-header {
+           margin-bottom: -20px;
+}
+
+.product-price {
+         font-size: 130%;
+         font-weight: bold;
+         text-align: center;
+}
+
+.product-desc {
+          list-style: none;
+}
+
+footer {
+        background-color: hsl(45, 50%, 90%);
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-center;
+        padding: 10px;
+        padding-bottom: 0px;
+}
+
+#footer-nav {
+     display: flex;
+     grid-gap: 10px;
+}
+
+footer p {
+     font-size: 85%;
+     color: gray;
+     margin-bottom: 10px;
+}
+
+.btn {
+     text-transform: uppercase;
+     background-color: hsl(45, 50%, 80%);
+     font-weight: bold;
+     border-radius: 6px;
+     height: 50px;
+  
+}
+
+.btn:hover {
+     transform: scale(1.05);
+     animation-name: background-color;
+     animation-duration: 150ms;
+     animation-fill-mode: forwards;
+}
+
+@keyframes background-color {
+     100% {
+      background-color: hsl(45, 70%, 65%);
+     }
+}
+
+@media(max-width: 590px) {
+     body {
+        font-size: 85%;
+       }
+	   
+  header {
+          grid-template-columns: 255px 1fr;
+         }
+		 
+  main {
+        top: 55px;
+       }
+ 
+  #nav-bar {
+            flex-direction: column;
+           }
+		   
+  .nav-link {
+            margin: 2px;
+            }
+  
+   .feature-section {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+                    }
+					
+ .feature-img {
+           display: none;
+           }
+  
+  #products {
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+           }
+		   
+  .product-section { 
+             margin-top: 10px;
+                   }
+  
+  footer {
+         margin-top: 65px; 
+         }
+}
+
+@media(max-width: 450px) {
+  body {
+      font-size: 75%;
+  }
+  header {
+      grid-template-columns: 210px 1fr;
+  }
+}
+
+ .button{border:none;}
+
+#buy {display: block;
+      width: 33%;
+      padding: 0.75rem;
+      background:(--color-green);
+      color: inherit;
+      cursor: pointer;
+      border: 1px double #DDD;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #333;
+      color:#FFFFFF;
+      font-family: 'Comic Sans MS'; 
+      font-size: 14px;
+     }
+
+.clue {
+       margin-left: 0.25rem;
+       font-size: 0.9rem;
+       color: #1B2631  ;
+    }
+
+ p{ font-size: 16px;
+    font-family: 'Comic Sans MS';
+    text-align: center;
+    color:black;}
+
+ h2{text-align: center;
+    font-size: 43px;
+    font-family: 'Lucida Handwriting';}
+
+ h3{font-size: 30px;
+    font-family: 'lobster';
+    text-align: center; 
+	}
+
+ 
+ 
+ #mores {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       height: 200px;
+       margin-top: 50px;
+      }
+
+#mores > h2 {
+        margin-bottom: 20px;
+        word-wrap: break-word;
+}
+
+#mores input[type='email'] {
+         max-width: 275px;
+         width: 100%;
+         padding: 5px;
+         }
+
+#mores input[type='submit'] {
+         max-width: 150px;
+         width: 100%;
+         height: 30px;
+         margin: 15px 0;
+         border: 0;
+         background-color: #f1c40f;
+         }
+
+#mores input[type='submit']:hover {
+           background-color: orange;
+           transition: background-color 1s;
+          }
+
+@media (max-width: 650px) {
+     #more {
+            margin-top: 120px;
+        }
+}
+
+ .border{background-color:white;
+         padding:30px;
+         border-style:ridge;
+         border-width:1px;
+	     border-radius:6px;
+		 }
+	   
+.borders{background-color:hsl(45, 50%, 90%);
+         padding:30px;
+         border-style:ridge;
+         border-width:1px;
+	     border-radius:6px;
+		 }
+	   
+	    
+ .size{width: 80%;
+       justify-self: center;
+        margin-top: 25px;
+	   }  
+	   
+  a {color: #000;
+    }
+	
+  a:hover{color:blue;
+         }   
+
+   </style> 
+</head>
+
+<body> 
+
+   <header id="header">
+      <img
+        id="header-img"
+        src="https://logodix.com/logo/15417.png"
+        alt="Wattpad logo" >
+     <nav id="nav-bar">
+	 
+      <a href="#overview" class="nav-link">BOOK OVERVIEW</a> 
+      <a href="#pricing" class="nav-link">PRICING  </a>
+      <a href="#author" class="nav-link">AUTHOR    </a>
+      <a href="#mores" class="nav-link">MORE    </a>
+      <button type="order now" id="buy" class="btn" link="">ORDER NOW</button>
+     
+	 </nav>
+   </header>
+
+
+<br>
+
+
+
+
+
+</br>
+<main>
+    <article id="overview">
+      <section class="feature-section">
+        <img src="https://a.wattpad.com/cover/19287752-176-k800010.jpg" class="feature-img" ALT="The Bad Boy and The Tomboy">
+        <div>
+        <h2>The Bad Boy and The Tomboy
+<br>
+<span class="clue">108M Reads,          
+ 3.4M Votes,     85 Chapters.</span>
+</br>
+</h2>
+<div class="border">
+<p>
+<br><strong> Some love stories begins in all the wrong ways.</strong></br>
+<br>
+Always comfortable being one of the guys, Macy Anderson is laser focused on only three things: studies, soccer, and a scholarship. Romance is the last thing on Macy’s mind, until Cedric Cahill -the one boy she’s ever crushed on- asks her out on a date.
+</br>
+<br>
+<span id="dots">.....</span></br>
+<span id="more">                                                                     
+<br>
+
+Handsome and charismatic, Cedric’s everything Macy has ever wanted in a boyfriend. There’s just one problem: Cedric’s cousin Sam. Brazen and unapologetic with a bad-boy reputation to match, Sam has an annoying way of constantly showing up in Macy’s life. Something crackles beneath their “just friends” relationship, and soon Macy’s thinking about him in all the ways she shouldn’t pushing things too far when she’s around him.
+
+As the tension between them escalates, Macy needs to decide if it’s worth risking both a friendship and a relationship to find out where her heart’s loyalties truly lie. Especially when the truth behind Sam’s bad-boy demeanor changes everything between them forever.
+</br>
+</span>
+<button onclick="myFunction()" id="myBtn">Read more</button>
+</p>
+</div>
+</section>
+   </article>
+   
+    <section id="how-it-works">
+     <iframe width="560" 
+	   height="315" 
+	   src="https://youtu.be/P1kmlB09zBg"
+	   frameborder="0"
+	   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+	   id="video" allowfullscreen>
+	  </iframe>
+    </section>
+	  
+  <article id="author" class="borders">
+      <section >
+	  <p>
+	  <h4>About the Author:</h4>
+	  Nicole Nwosu grew up in Toronto, Canada, and first started posting her stories on Wattpad in
+2014. Her most popular story The Bad Boy and the Tomboy has accumulated over a hundred
+Million reads on the platform and won a 2015 "Cover-to-Cover" Watty Award. When she's not
+Writing, Nicole spends her time catching up on binge-worthy TV shows while balancing her
+Studies at Western University. Because of her amazing writing skills, Nicole was given the opportunity to publish her book –The Bad Boy and The Tomboy – by the Wattpad publishers, becoming a best seller the instant it was published.
+        </p>
+		</section>
+   </article>
+	
+    <article id="pricing">
+      <section class="product-section">
+        <div class="product-header">
+          <h3> <a href="" Target="_blank">The Bad Boy and The Tomboy</a></h3>
+        </div>
+		<span>by Nicole Nwosu</span>
+		<img src="image/book.jpg" class="size"`>
+        <div class="product-content">
+          <p class="product-price">$10.23</p>
+          <ol class="product-desc">
+            <li>Some love stories begin in all the wrong ways.</li>
+           <br> <li>108M Reads.</li>
+            <li>3.4M Votes.</li>
+            <li>85 Chapters.</li> </br>
+          </ol>
+        </div>
+        <button class="btn">Get now</button>
+      </section>
+	  
+	  <section class="product-section">
+        <div class="product-header">
+          <h3><a href="" Target="_blank"> She's With Me (With Me. 1)</a></h3>
+        </div>
+		<span>by Jessica Cunsolo</span>
+		<img src="image/she.jpg" class="size"`>
+        <div class="product-content">
+          <p class="product-price">$8.29</p>
+          <ol class="product-desc">
+            <li>A new town, a new love, another chance to stay alive.</li>
+            <br> <li>120M Reads.</li>
+            <li>2.9M Votes.</li>
+            <li>72 Chapters.</li> </br>
+          </ol>
+        </div>
+        <button class="btn">Get now</button>
+      </section>
+	  	  
+	   <section class="product-section">
+        <div class="product-header">
+          <h3><a href="" Target="_blank">Stay With Me (With Me. 2)</a></h3>
+        </div>
+		<span>by Jessica Cunsolo</span>
+		<img src="image/stay.png" class="size"`>
+        <div class="product-content">
+          <p class="product-price">$10.99</p>
+          <ol class="product-desc">
+            <li> Tensions are high as secreats are being unraveled, can this love stand the test of time? </li>
+            <br> <li>148M Reads.</li>
+            <li>2.1M Votes.</li>
+            <li>56 Chapters.</li> </br>
+          </ol>
+        </div>
+        <button class="btn">Get now</button>
+     </section>
+	 
+    </article>
+     <article id="mores">
+<h3> For Updates on  more Wattpad books</h3>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input type="email" name="email" placeholder="enter your email" id="email" required></input>
+        <input type="submit" id="submit" value="Get Started" class="btn">
+      </form>
+    </article>
+    </div>
+
+  
+  </main>
+</br>
+
+<footer>
+      <nav id="footer-nav">
+      <a href="#" class="nav-link">Privacy</a>
+      <a href="#" class="nav-link">Terms</a>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+    <p>Copyright 2020, Wattpad Books.</p>
+</footer>
+</body>
+</html>
